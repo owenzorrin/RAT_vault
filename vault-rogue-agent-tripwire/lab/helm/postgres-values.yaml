@@ -1,0 +1,32 @@
+# Helm values for Bitnami PostgreSQL chart
+# Used by: make lab-up
+# Chart: https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+
+auth:
+  # Use postgres superuser only — simpler for the lab.
+  # Vault connects as postgres to create/revoke dynamic users.
+  postgresPassword: "labpassword"
+  database: "labdb"
+
+primary:
+  service:
+    type: ClusterIP
+    ports:
+      postgresql: 5432
+
+  # Persist nothing — lab teardown should be clean.
+  persistence:
+    enabled: false
+
+  # PG18 defaults to scram-sha-256 for password storage; pg_hba must match.
+  # Also allow Vault (running outside the cluster via port-forward) to connect.
+  pgHbaConfiguration: |
+    host     all             all             0.0.0.0/0               scram-sha-256
+    host     all             all             ::/0                    scram-sha-256
+    local    all             all                                     scram-sha-256
+    host     all             all             127.0.0.1/32            scram-sha-256
+    host     all             all             ::1/128                 scram-sha-256
+
+  extraEnvVars:
+    - name: POSTGRESQL_AUTH_METHOD
+      value: "scram-sha-256"

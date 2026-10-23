@@ -1,0 +1,37 @@
+# Helm values for HashiCorp Vault (hashicorp/vault chart)
+# Used by: make lab-up
+# Chart: https://github.com/hashicorp/vault-helm
+
+global:
+  enabled: true
+
+injector:
+  enabled: false   # no sidecar injector needed for the lab
+
+server:
+  # Dev mode: auto-unsealed, in-memory storage, root token = "root"
+  dev:
+    enabled: true
+    devRootToken: "root"
+
+  # Expose Vault on a stable ClusterIP so port-forward and pod DNS both work.
+  service:
+    enabled: true
+    type: ClusterIP
+    port: 8200
+
+  # Audit log directory — used by the file audit device.
+  volumes:
+    - name: audit
+      emptyDir: {}
+  volumeMounts:
+    - name: audit
+      mountPath: /vault/audit
+
+  # Allow vault pods to reach the host via host.minikube.internal (needed for
+  # the socket audit device pointing back to tripwire on the host Mac).
+  extraEnvironmentVars:
+    VAULT_LOG_LEVEL: "debug"
+
+ui:
+  enabled: false

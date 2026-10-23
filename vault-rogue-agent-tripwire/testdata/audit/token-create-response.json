@@ -1,0 +1,86 @@
+{
+  "auth": {
+    "accessor": "hmac-sha256:eb12834a8802affcdd614dc0ec8766f66e72d8c426145ece99427767795335e1",
+    "client_token": "hmac-sha256:f10074d286e7d89deff609284b131cf9e19e0476442b72cb89e3c1c768315f2c",
+    "display_name": "root",
+    "policies": [
+      "root"
+    ],
+    "policy_results": {
+      "allowed": true,
+      "granting_policies": [
+        {
+          "type": ""
+        },
+        {
+          "name": "root",
+          "namespace_id": "root",
+          "type": "acl"
+        }
+      ]
+    },
+    "token_policies": [
+      "root"
+    ],
+    "token_issue_time": "2026-10-23T11:40:47-07:00",
+    "token_type": "service"
+  },
+  "request": {
+    "client_id": "0DHqvq2D77kL2/JTPSZkTMJbkFVmUu0TzMi0jiXcFy8=",
+    "client_token": "hmac-sha256:f10074d286e7d89deff609284b131cf9e19e0476442b72cb89e3c1c768315f2c",
+    "client_token_accessor": "hmac-sha256:eb12834a8802affcdd614dc0ec8766f66e72d8c426145ece99427767795335e1",
+    "data": {
+      "display_name": "hmac-sha256:3518228c93a390a829149d9ef2b68d1b78d82ee6c1e7de05b97bc34b7ae1dc0e",
+      "entity_alias": "hmac-sha256:3518228c93a390a829149d9ef2b68d1b78d82ee6c1e7de05b97bc34b7ae1dc0e",
+      "explicit_max_ttl": "hmac-sha256:14a323788598ee7145887c8f99b21feca020485684a84826536d4c8bdf65b512",
+      "num_uses": "hmac-sha256:a1ba0ca908ac166cd70990dc35443ec19b63e1f501b8e27d9a94dd6c21e1db32",
+      "period": "hmac-sha256:14a323788598ee7145887c8f99b21feca020485684a84826536d4c8bdf65b512",
+      "policies": [
+        "hmac-sha256:4a991c2d94f4350689b4745072b2eea394176b9a39bd058ff2c8faa1938ca254"
+      ],
+      "renewable": true,
+      "ttl": "hmac-sha256:5fdf38f10f346e9d4cf7b72b6f2b03b5c4fe85c91de8e32b96c3062ac80af37c",
+      "type": "hmac-sha256:ecc72e2fc29ef3af4b40c3cd6da3dab60d0888e9fcae0248bdf10fbc587a587e"
+    },
+    "headers": {
+      "user-agent": [
+        "Go-http-client/1.1"
+      ]
+    },
+    "id": "b647169b-a878-a88e-0d7c-49ef86fcda1e",
+    "mount_accessor": "auth_token_c173f6ab",
+    "mount_class": "auth",
+    "mount_point": "auth/token/",
+    "mount_running_version": "v1.21.6+builtin.vault",
+    "mount_type": "token",
+    "namespace": {
+      "id": "root"
+    },
+    "operation": "update",
+    "path": "auth/token/create",
+    "remote_address": "127.0.0.1",
+    "remote_port": 54091
+  },
+  "response": {
+    "auth": {
+      "accessor": "hmac-sha256:74a50f8afcceb97559b47ac7afe95c9fceb408312ca3ac286edad2a73868005c",
+      "client_token": "hmac-sha256:6728bb8467c0ed0d5d5e45d5f112722ad720e0fec54fbc7457265e2350ef0a12",
+      "display_name": "token",
+      "policies": [
+        "default"
+      ],
+      "token_policies": [
+        "default"
+      ],
+      "token_ttl": 3600,
+      "token_type": "service"
+    },
+    "mount_accessor": "auth_token_c173f6ab",
+    "mount_class": "auth",
+    "mount_point": "auth/token/",
+    "mount_running_plugin_version": "v1.21.6+builtin.vault",
+    "mount_type": "token"
+  },
+  "time": "2026-10-23T18:41:49.408973Z",
+  "type": "response"
+}

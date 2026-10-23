@@ -1,0 +1,71 @@
+{
+  "auth": {
+    "accessor": "hmac-sha256:d11dbe51dba42d821817a3c3a6984618f4db83a951912911e036ba5652ec9c78",
+    "client_token": "hmac-sha256:f10074d286e7d89deff609284b131cf9e19e0476442b72cb89e3c1c768315f2c",
+    "display_name": "userpass-testuser",
+    "entity_id": "1a9ee07c-3c66-5d5b-d6ea-e48c456651c5",
+    "metadata": {
+      "username": "testuser"
+    },
+    "policies": [
+      "default"
+    ],
+    "token_policies": [
+      "default"
+    ],
+    "token_ttl": 2764800,
+    "token_type": "service"
+  },
+  "request": {
+    "client_id": "0DHqvq2D77kL2/JTPSZkTMJbkFVmUu0TzMi0jiXcFy8=",
+    "client_token": "hmac-sha256:f10074d286e7d89deff609284b131cf9e19e0476442b72cb89e3c1c768315f2c",
+    "client_token_accessor": "hmac-sha256:eb12834a8802affcdd614dc0ec8766f66e72d8c426145ece99427767795335e1",
+    "data": {
+      "password": "hmac-sha256:a17ddd2ad93a4d39a738619d0911ad3fe794130719d8d90b3e96076229f7ad02"
+    },
+    "headers": {
+      "user-agent": [
+        "Go-http-client/1.1"
+      ]
+    },
+    "id": "19f2b75c-6f88-838e-6e5c-7b283d7a712c",
+    "mount_accessor": "auth_userpass_de6043d3",
+    "mount_class": "auth",
+    "mount_point": "auth/userpass/",
+    "mount_running_version": "v1.21.6+builtin.vault",
+    "mount_type": "userpass",
+    "namespace": {
+      "id": "root"
+    },
+    "operation": "update",
+    "path": "auth/userpass/login/testuser",
+    "remote_address": "127.0.0.1",
+    "remote_port": 54742
+  },
+  "response": {
+    "auth": {
+      "accessor": "hmac-sha256:d11dbe51dba42d821817a3c3a6984618f4db83a951912911e036ba5652ec9c78",
+      "client_token": "hmac-sha256:3394b7abe772d508d793fdda2a71cda1282f29643567ce6dd548ab2174646efb",
+      "display_name": "userpass-testuser",
+      "entity_id": "1a9ee07c-3c66-5d5b-d6ea-e48c456651c5",
+      "metadata": {
+        "username": "testuser"
+      },
+      "policies": [
+        "default"
+      ],
+      "token_policies": [
+        "default"
+      ],
+      "token_ttl": 2764800,
+      "token_type": "service"
+    },
+    "mount_accessor": "auth_userpass_de6043d3",
+    "mount_class": "auth",
+    "mount_point": "auth/userpass/",
+    "mount_running_plugin_version": "v1.21.6+builtin.vault",
+    "mount_type": "userpass"
+  },
+  "time": "2026-10-23T18:44:33.237574Z",
+  "type": "response"
+}

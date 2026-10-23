@@ -1,0 +1,42 @@
+{
+  "auth": {
+    "accessor": "hmac-sha256:eb12834a8802affcdd614dc0ec8766f66e72d8c426145ece99427767795335e1",
+    "client_token": "hmac-sha256:f10074d286e7d89deff609284b131cf9e19e0476442b72cb89e3c1c768315f2c",
+    "display_name": "root",
+    "policies": [
+      "root"
+    ],
+    "policy_results": {
+      "allowed": true
+    },
+    "token_policies": [
+      "root"
+    ],
+    "token_issue_time": "2026-10-23T11:40:47-07:00",
+    "token_type": "service"
+  },
+  "request": {
+    "client_id": "0DHqvq2D77kL2/JTPSZkTMJbkFVmUu0TzMi0jiXcFy8=",
+    "client_token": "hmac-sha256:f10074d286e7d89deff609284b131cf9e19e0476442b72cb89e3c1c768315f2c",
+    "client_token_accessor": "hmac-sha256:eb12834a8802affcdd614dc0ec8766f66e72d8c426145ece99427767795335e1",
+    "headers": {
+      "user-agent": [
+        "Go-http-client/1.1"
+      ]
+    },
+    "id": "4159f551-bb7d-5768-d992-188f0a76941e",
+    "mount_class": "secret",
+    "mount_point": "sys/",
+    "mount_running_version": "v1.21.6+builtin.vault",
+    "mount_type": "system",
+    "namespace": {
+      "id": "root"
+    },
+    "operation": "read",
+    "path": "sys/internal/ui/mounts/kv/research/artifactory-admin",
+    "remote_address": "127.0.0.1",
+    "remote_port": 54038
+  },
+  "time": "2026-10-23T18:41:37.134984Z",
+  "type": "request"
+}

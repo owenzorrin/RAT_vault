@@ -1,0 +1,12 @@
+listen_addr: "0.0.0.0:9090"
+vault_addr: "http://127.0.0.1:8200"   # token from VAULT_TOKEN env var
+dry_run: true
+eval_role_pattern: "^eval-[a-z0-9-]+$"
+lease_prefix_template: "database/creds/{{.Role}}"
+kv_mounts: ["kv"]                      # KV v2 mounts, used for path normalization
+decoys:
+  - "kv/research/artifactory-admin"    # logical paths (no data/ or metadata/)
+notify:
+  webhook_url: ""                      # optional, Slack-compatible
+ingest:
+  buffer_size: 10000
